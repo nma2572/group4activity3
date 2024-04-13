@@ -103,7 +103,11 @@ def visualize_data(data, column):
 def main():
     print("---------------------------------\nWelcome to Data Analysis CLI\n---------------------------------")
     print("Program stages:\n1. Load Data\n2. Clean and prepare data\n3. Analyse Data\n4. Visualize Data")
-
+   
+    """
+    Prints the welcome message and the stages of the program.
+    """
+   
     file_path = prompt_file_path()
     data, columns = load_csv_data(file_path)
 
@@ -116,7 +120,7 @@ def main():
             break
         else:
             print(f"The column '{column_choice}' contains non-numerical values. Please choose a different column.")
-
+    
     print("Stage 2: Clean and prepare data")
     choice = input("Replace empty cells with (min, max, average): ").lower()
     try:
